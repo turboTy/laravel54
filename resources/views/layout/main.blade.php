@@ -28,6 +28,15 @@
     </head>
     <body>
 
+    @if('1' == '1')
+        @component('alert', ['foo' => 'Error 101'])
+            @slot('title')
+               <strong></strong>
+            @endslot
+            Somethins Went Wrong!
+        @endcomponent
+    @endif
+
     @include("layout.header")
 
     @yield("content")
