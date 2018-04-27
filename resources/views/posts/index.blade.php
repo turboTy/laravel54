@@ -1,5 +1,7 @@
 @extends("layout.main")
 
+@section("title", 'Index Page')
+
 @section("content")
     <!-- .t-main begin -->
    <div class="t-main">

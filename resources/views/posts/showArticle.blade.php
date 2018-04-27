@@ -1,8 +1,10 @@
 @extends("layout.main")
 
+@section("title", "Show Article")
+
 @section("content")
 <div class="article-detail">
-	<h3>扩展布局{{$id}}</h3>
+	<h3>{{$data}}扩展布局{{$id}}</h3>
 	<h5>编辑：admin 　时间：2018年4月27日</h5>
 	<p>
 		定义子页面的时候，可以使用 Blade 的 extends 指令来指定子页面所继承的布局，继承一个 Blade 布局的视图将会使用 section指令注入内容到布局的片段中，记住，如上面例子所示，这些片段的内容将会显示在布局中使用 yield 的地方：

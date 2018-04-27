@@ -1,5 +1,7 @@
 @extends("layout.main")
 
+@section("title", "List Article")
+
 @section("content")
     <!-- .t_main begin -->
     <div class="t_main">

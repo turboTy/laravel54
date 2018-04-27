@@ -16,8 +16,13 @@ class PostController extends Controller
 
     public function showArticle($id)
     {
-
-    	return view("posts/showArticle", ['id' => $id]);
+    	$data = 'test';
+    	return view("posts/showArticle", compact(
+    		array(
+    			'id', 
+    			'data',
+    		)
+    	));
     }
 
 }
