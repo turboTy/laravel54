@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get("test", function() {
+	return "hello world";
+});
+
+//主页
+Route::get("posts", 'PostController@index');
+
+//列表页
+Route::any("posts/listArticle", 'PostController@listArticle');
