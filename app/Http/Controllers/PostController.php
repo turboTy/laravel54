@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
+
 class PostController extends Controller
 {
 
@@ -11,18 +13,20 @@ class PostController extends Controller
 
     public function listArticle()
     {
-    	return view("posts/listArticle");
+    	$articles = DB::select('select * from posts where user_id = ?', [1]);
+
+    	return view("posts/listArticle", compact('articles'));
     }
 
     public function showArticle($id)
     {
-    	$data = 'test';
-    	return view("posts/showArticle", compact(
-    		array(
-    			'id', 
-    			'data',
-    		)
-    	));
+    	$article = DB::select('select * from posts where id = ? limit 1', [$id]);
+
+    	//var_dump($article);
+
+    	$article[0]->user_id = $article[0]->user_id == '1' ? '管理员' : '一般用户';
+
+    	return view("posts/showArticle", compact('article'));
     }
 
 }

@@ -115,66 +115,16 @@
     								<th>阅读人次</th>
     								<th>发布日期</th>
     							</tr>
+
+                                @foreach ($articles as $v)
     							<tr class="trbg">
-    								<td align="center">1</td>
-    								<td align="left"><a href="">2017年分省分专业招生计划</a></td>
-    								<td align="center">7410</td>
-    								<td align="center">2017年8月30日</td>
+    								<td align="center">{{$v->id}}</td>
+    								<td align="left"><a href="showArticle/{{$v->id}}">{{$v->title}}</a></td>
+    								<td align="center">{{$v->read_times}}</td>
+    								<td align="center">{{ $v->created_at }}</td>
     							</tr>
-    							<tr class="trbg">
-    								<td align="center">2</td>
-    								<td align="left"><a href="">2017年分省分专业招生计划</a></td>
-    								<td align="center">7410</td>
-    								<td align="center">2017年8月30日</td>
-    							</tr>
-    							<tr class="trbg">
-    								<td align="center">3</td>
-    								<td align="left"><a href="">2017年分省分专业招生计划</a></td>
-    								<td align="center">7410</td>
-    								<td align="center">2017年8月30日</td>
-    							</tr>
-    							<tr class="trbg">
-    								<td align="center">4</td>
-    								<td align="left"><a href="">2017年分省分专业招生计划</a></td>
-    								<td align="center">7410</td>
-    								<td align="center">2017年8月30日</td>
-    							</tr>
-    							<tr class="trbg">
-    								<td align="center">5</td>
-    								<td align="left"><a href="">2017年分省分专业招生计划</a></td>
-    								<td align="center">7410</td>
-    								<td align="center">2017年8月30日</td>
-    							</tr>
-    							<tr class="trbg">
-    								<td align="center">6</td>
-    								<td align="left"><a href="">2017年分省分专业招生计划</a></td>
-    								<td align="center">7410</td>
-    								<td align="center">2017年8月30日</td>
-    							</tr>
-    							<tr class="trbg">
-    								<td align="center">7</td>
-    								<td align="left"><a href="">2017年分省分专业招生计划</a></td>
-    								<td align="center">7410</td>
-    								<td align="center">2017年8月30日</td>
-    							</tr>
-    							<tr class="trbg">
-    								<td align="center">8</td>
-    								<td align="left"><a href="">2017年分省分专业招生计划</a></td>
-    								<td align="center">7410</td>
-    								<td align="center">2017年8月30日</td>
-    							</tr>
-    							<tr class="trbg">
-    								<td align="center">9</td>
-    								<td align="left"><a href="">2017年分省分专业招生计划</a></td>
-    								<td align="center">7410</td>
-    								<td align="center">2017年8月30日</td>
-    							</tr>
-    							<tr class="trbg">
-    								<td align="center">10</td>
-    								<td align="left"><a href="">2017年分省分专业招生计划</a></td>
-    								<td align="center">7410</td>
-    								<td align="center">2017年8月30日</td>
-    							</tr>
+                                @endforeach
+    							
     						</table>
     					</div>
     					<div class="sm_main_page">
