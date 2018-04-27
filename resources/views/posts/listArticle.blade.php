@@ -19,7 +19,7 @@
                                             <h4>06</h4>
                                     </div>
                                     <div class="hot_news_r fl">
-                                            <h5><a href="">我校获国家自然科学基金项目立项两项</a></h5>
+                                            <h5><a href="/posts/showArticle/1">我校获国家自然科学基金项目立项两项</a></h5>
                                     </div>
                                 </li>
     							<li class="col-md-12 col-sm-12 col-xs-12">
@@ -184,4 +184,4 @@
     	</div>
     </div>
     <!-- .t_main end -->
-@endsection("content")
+@endsection

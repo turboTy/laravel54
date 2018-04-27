@@ -857,7 +857,29 @@ body {
 	margin: 20px 10px;
 }
 
+.article-detail {
+	width: 80%;
+	min-height: 240px;
+	margin: 10px auto 50px auto;
+	background-color: #fff;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+	padding: 15px 60px;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 2em;
+}
 
+.article-detail > h5 {
+	color: #666;
+	background-color: #f6f7fb;
+	padding: 3px 0;
+}
+
+
+.article-detail > p {
+	text-align: left;
+	text-indent: 2em;
+}
 
 
 
