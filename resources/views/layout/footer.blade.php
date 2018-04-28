@@ -46,4 +46,3 @@
         <a href="#" class="glyphicon glyphicon-chevron-up"></a>
     </div>
     <!-- BACK-TO-TOP end -->
-    
