@@ -118,7 +118,7 @@
 
                                 @foreach ($articles as $v)
     							<tr class="trbg">
-    								<td align="center">{{$v->id}}</td>
+    								<td align="center">{{$loop->iteration}}</td>
     								<td align="left"><a href="showArticle/{{$v->id}}">{{$v->title}}</a></td>
     								<td align="center">{{$v->read_times}}</td>
     								<td align="center">{{ $v->created_at }}</td>
