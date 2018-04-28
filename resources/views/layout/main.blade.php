@@ -30,11 +30,11 @@
 
 
     @if('1' == '1')
-        @component('alert', ['foo' => 'Error 101'])
+        @component('alert', ['foo' => 'Error 101:'])
             @slot('title')
                <strong></strong>
             @endslot
-            Somethins Went Wrong!
+            Something Went Wrong!
         @endcomponent
     @endif
 
