@@ -13,5 +13,9 @@
 	</p>
 	@endforeach
 
+	<div class="article-bottom-btn">
+		<input class="btn btn-default" type="button" value="返回" onclick="return window.history.back();">
+	</div>
+
 </div>
 @endsection
