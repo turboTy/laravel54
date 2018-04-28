@@ -13,7 +13,7 @@ class PostController extends Controller
 
     public function listArticle()
     {
-    	$articles = DB::select('select * from posts where user_id < ? order by id', [5]);
+    	$articles = DB::select('select * from posts where user_id < ? order by id', [6]);
 
     	return view("posts/listArticle", compact('articles'));
     }
