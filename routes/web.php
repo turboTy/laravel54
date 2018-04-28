@@ -27,3 +27,4 @@ Route::any("posts/listArticle", 'PostController@listArticle');
 
 //文章页
 Route::any("posts/showArticle/{id}", 'PostController@showArticle')->where("id","[0-9]+");
+
