@@ -859,7 +859,7 @@ body {
 
 .article-detail {
 	width: 80%;
-	min-height: 240px;
+	min-height: 400px;
 	margin: 10px auto 50px auto;
 	background-color: #fff;
 	box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -867,12 +867,14 @@ body {
 	border-radius: 5px;
 	text-align: center;
 	line-height: 2em;
+	position: relative;
 }
 
 .article-detail > h5 {
 	color: #666;
 	background-color: #f6f7fb;
 	padding: 3px 0;
+	margin: 15px 0 30px 0;
 }
 
 
@@ -883,6 +885,9 @@ body {
 
 .article-bottom-btn {
 	margin: 40px 0 10px 0;
+	position: absolute;
+	bottom: 25px;
+	left: 48%;
 }
 
 
