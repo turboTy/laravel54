@@ -130,6 +130,7 @@ body {
 .header-menu {
 	height: 40px;
 	width: 80%;
+	max-width: 1180px;
 	margin: 0 auto;
 	box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
 }
@@ -858,7 +859,6 @@ body {
 }
 
 .article-detail {
-	width: 80%;
 	min-height: 400px;
 	margin: 10px auto 50px auto;
 	background-color: #fff;

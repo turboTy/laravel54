@@ -3,7 +3,7 @@
 @section("title", "Show Article")
 
 @section("content")
-<div class="article-detail">
+<div class="article-detail container">
 
 	@foreach ($article as $v)
 	<h3>{{$v->title}}</h3>
