@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
+use \App\Post;
 
 class PostController extends Controller
 {
@@ -13,8 +14,8 @@ class PostController extends Controller
 
     public function listArticle()
     {
-    	$articles = DB::select('select * from posts where user_id < ? order by id', [6]);
-
+    	//$articles = DB::select('select * from posts where user_id < ? order by id', [6]);
+		$articles = Post::orderBy('created_at', 'desc')->paginate(10);
     	return view("posts/listArticle", compact('articles'));
     }
 

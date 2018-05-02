@@ -25,8 +25,8 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Post::class, function (Faker\Generator $faker) {
     return [
-        'title' => $faker->address,
-        'content' => $faker->paragraph,
+        'title' => $faker->sentence(8),
+        'content' => $faker->paragraph(10),
         'created_at' => date("Y-m-d H:i:s", time()),
         'read_times' => $faker->numberBetween(8, 66),
         'user_id' => $faker->numberBetween(1, 5),

@@ -118,17 +118,22 @@
 
                                 @foreach ($articles as $v)
     							<tr class="trbg">
-    								<td align="center">{{$loop->iteration}}</td>
-    								<td align="left"><a href="showArticle/{{$v->id}}">{{$v->title}}</a></td>
+    								<td align="center">{{$loop->iteration}}</td> <!-- $loop->iteration 迭代次数 -->
+    								<td align="left"><a href="showArticle/{{$v->id}}">{{str_limit($v->title, 48, '...')}}</a></td>	<!-- str_limit() 超过param2部分用param3代替 -->
     								<td align="center">{{$v->read_times}}</td>
-    								<td align="center">{{ $v->created_at }}</td>
+    								<td align="center">{{$v->created_at->toFormattedDateString()}}</td> <!-- toFormattedDateString() 时间格式化 -->
     							</tr>
                                 @endforeach
     							
     						</table>
     					</div>
-    					<div class="sm_main_page">
-    						<p>共&nbsp;23&nbsp;条信息，每页显示&nbsp;10&nbsp;条，共&nbsp;3&nbsp;页&nbsp;第&nbsp;1&nbsp;<a href="">2</a>&nbsp;<a href="">3</a>&nbsp;页&nbsp;<a href="">下一页</a>&nbsp;<a href="">尾页</a>，转到第&nbsp;<input type="text" name="page_num" class="page_num">&nbsp;页 <input type="button" name="page_btn" class="btn btn-primary" value="确定"></p>
+    					<!-- <div class="sm_main_page">
+    						<p>共&nbsp;23&nbsp;条信息，每页显示&nbsp;10&nbsp;条，共&nbsp;3&nbsp;页&nbsp;第&nbsp;1&nbsp;<a href="">2</a>&nbsp;<a href="">3</a>&nbsp;页&nbsp;<a href="">
+    						下一页</a>&nbsp;<a href="">尾页</a>，转到第&nbsp;<input type="text" name="page_num" class="page_num">&nbsp;页 
+    						<input type="button" name="page_btn" class="btn btn-primary" value="确定"></p>
+    					</div> -->
+    					<div class="sm_main_page" style="margin-left: 38px;">
+    						{{$articles->links()}}
     					</div>
     				</div>
     			</div>
