@@ -29,7 +29,7 @@
     <body>
 
 
-    @if('1' == '1')
+    @if(1)
         @component('alert', ['foo' => 'Error 101:'])
             @slot('title')
                <strong></strong>
