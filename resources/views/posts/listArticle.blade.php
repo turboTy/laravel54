@@ -120,7 +120,7 @@
                                 @foreach ($articles as $v)
     							<tr class="trbg">
     								<td align="center">{{$loop->iteration}}</td> <!-- $loop->iteration 迭代次数 -->
-    								<td align="left"><a href="{{$v->id}}">{{str_limit($v->title, 48, '...')}}</a></td>	<!-- str_limit() 超过param2部分用param3代替 -->
+    								<td align="left"><a href="{{$v->id}}" title="{{$v->title}}">{{str_limit($v->title, 48, '...')}}</a></td>	<!-- str_limit() 超过param2部分用param3代替 -->
     								<td align="center">{{$v->read_times}}</td>
     								<td align="center">{{$v->created_at->toFormattedDateString()}}</td> <!-- toFormattedDateString() 时间格式化 -->
     							</tr>
