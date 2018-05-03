@@ -100,6 +100,7 @@
     					<div class="sm_main_content">
     						<span class="fr">
     							<form name="form1" method="post" action="">
+    								<input type="button" class="btn btn-primary fl" value='发布新文章' onclick="return window.location.href='create';">
 	    							<input type="text" name="search_keyword" class="search_keyword fl form-control" placeholder="请输入关键字">
 	    							<select name="search_type" class="fl">
 	    								<option value="1">标　题</option>
@@ -119,7 +120,7 @@
                                 @foreach ($articles as $v)
     							<tr class="trbg">
     								<td align="center">{{$loop->iteration}}</td> <!-- $loop->iteration 迭代次数 -->
-    								<td align="left"><a href="showArticle/{{$v->id}}">{{str_limit($v->title, 48, '...')}}</a></td>	<!-- str_limit() 超过param2部分用param3代替 -->
+    								<td align="left"><a href="{{$v->id}}">{{str_limit($v->title, 48, '...')}}</a></td>	<!-- str_limit() 超过param2部分用param3代替 -->
     								<td align="center">{{$v->read_times}}</td>
     								<td align="center">{{$v->created_at->toFormattedDateString()}}</td> <!-- toFormattedDateString() 时间格式化 -->
     							</tr>

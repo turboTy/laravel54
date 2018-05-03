@@ -26,5 +26,11 @@ Route::get("posts", 'PostController@index');
 Route::any("posts/listArticle", 'PostController@listArticle');
 
 //文章页
-Route::any("posts/showArticle/{id}", 'PostController@showArticle')->where("id","[0-9]+");
+Route::any("posts/{post}", 'PostController@showArticle')->where("post","[0-9]+");
+
+//创建文章
+Route::get("posts/create", 'PostController@create');
+
+//保存文章
+Route::any("posts/store", 'PostController@store');
 

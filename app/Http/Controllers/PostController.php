@@ -19,16 +19,25 @@ class PostController extends Controller
     	return view("posts/listArticle", compact('articles'));
     }
 
-    public function showArticle($id)
+    public function showArticle(Post $post)	//模型绑定
     {
-    	$article = DB::select('select * from posts where id = ? limit 1', [$id]);
-
-    	//var_dump($article);
-
-    	$article[0]->user_id = $article[0]->user_id == '1' ? '管理员' : '一般用户';
-
-    	return view("posts/showArticle", compact('article'));
+    	$post->user_id = $post->user_id == '1' ? '管理员' : '一般用户';
+    	
+    	return view("posts/showArticle", compact('post'));
     }
+    
+    public function create()
+    {
+    	return view("posts/create");
+    }
+    
+    public function store()
+    {
+    	$post = Post::create(request(['title', 'content']));    	//tinker的应用
+    	return redirect("\posts\listArticle");
+    }
+    
+    
 
 }
 

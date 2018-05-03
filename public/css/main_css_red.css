@@ -785,12 +785,13 @@ body {
 }
 
 .sm_main_content > span {
-	width: 52%;
-	margin: 10px 0 15px 0;
+	width: 90%;
+	margin: 10px 5% 15px 0;
 }
 
 .search_keyword {
-	width: 60%;
+	max-width: 30%;
+	margin-left: 34%;
 }
 
 .sm_main_content > span select {
@@ -884,10 +885,19 @@ body {
 }
 
 .article-bottom-btn {
+	width: 20%;
 	margin: 40px 0 10px 0;
 	position: absolute;
 	bottom: 25px;
-	left: 48%;
+	left: 40%;
+}
+
+.article-detail > textarea {
+	margin-bottom: 100px;
+}
+
+.article-title {
+	margin: 30px 0;
 }
 
 
