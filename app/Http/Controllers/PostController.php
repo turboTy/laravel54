@@ -33,8 +33,10 @@ class PostController extends Controller
     
     public function store()
     {
+
     	$post = Post::create(request(['title', 'content']));    	//tinker的应用
-    	return redirect("\posts\listArticle");
+        //dd($post);
+    	return redirect("posts/listArticle");
     }
     
     
