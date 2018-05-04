@@ -6,13 +6,13 @@
 <form name='form1' action='\posts\store' method='post'>
 <div class="article-detail container">
 	{{csrf_field()}}
-	<input class="form-control article-title" type='text' name='title' placeholder='文章标题'>
+	<input class="form-control article-title" type='text' name='title' placeholder='文章标题' value="{{$post->title}}">
 
 	<div class="article-editor" style="margin-bottom: 65px;">
 	    @include('vendor.UEditor.head')  
 	    <!-- 加载编辑器的容器 -->  
 	    <script id="container" name="content" type="text/plain" style='width:100%;height:300px;'>  
-
+	    	{!!$post->content!!}
 	    </script>  
 	    <!-- 实例化编辑器 -->  
 	    <script type="text/javascript">  

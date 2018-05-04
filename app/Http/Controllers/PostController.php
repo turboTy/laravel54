@@ -38,6 +38,11 @@ class PostController extends Controller
         //dd($post);
     	return redirect("posts/listArticle");
     }
+
+    public function edit(Post $post)
+    {
+        return view("posts/edit", compact("post"));
+    }
     
     
 

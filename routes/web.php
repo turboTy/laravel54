@@ -31,6 +31,9 @@ Route::any("posts/{post}", 'PostController@showArticle')->where("post","[0-9]+")
 //创建文章
 Route::get("posts/create", 'PostController@create');
 
+//编辑文章
+Route::any("posts/{post}/edit", 'PostController@edit');
+
 //保存文章
 Route::any("posts/store", 'PostController@store');
 
