@@ -28,12 +28,15 @@ Route::any("posts/listArticle", 'PostController@listArticle');
 //文章页
 Route::any("posts/{post}", 'PostController@showArticle')->where("post","[0-9]+");
 
-//创建文章
+//创建文章页面
 Route::get("posts/create", 'PostController@create');
 
 //编辑文章
-Route::any("posts/{post}/edit", 'PostController@edit');
+Route::any("posts/{post}/edit", 'PostController@edit')->where("post", "[0-9]+");
 
-//保存文章
+//保存创建文章
 Route::any("posts/store", 'PostController@store');
+
+//保存修改文章
+Route::any("posts/{post}/save", "PostController@save")->where("post", "[0-9]+");
 

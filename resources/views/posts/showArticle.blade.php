@@ -8,7 +8,7 @@
 
 	<h3>{{$post->title}}</h3>
 	<h5>编辑：{{$post->user_id}} 　时间：{{$post->created_at->toFormattedDateString()}}</h5>
-	<div style="margin-bottom: 65px;">
+	<div style="margin-bottom: 65px;text-align: left;">
 	{!!$post->content!!}
 	</div>
 

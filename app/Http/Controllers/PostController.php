@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use \App\Post;
+use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
@@ -42,6 +43,18 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         return view("posts/edit", compact("post"));
+    }
+
+    public function save(Request $request, $post)
+    {
+        $posts = Post::find($post);
+        
+        $posts->title = $request->title;
+        $posts->content = $request->content;
+
+        $posts->save();
+
+        return redirect("posts/listArticle");
     }
     
     
