@@ -141,7 +141,7 @@
     					</div> -->
     					<div class="sm_main_page" style="margin-left: 38px;">
     						{{$articles->links()}}
-                            <input type="button" class="btn btn-warning article-list-addData" value="增加10条测试数据" style="float: right;margin: 22px 40px;">
+                            <input type="button" class="btn btn-warning article-list-addData" value="增加10条测试数据" >
     					</div>
     				</div>
     			</div>
