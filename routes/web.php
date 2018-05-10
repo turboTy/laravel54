@@ -43,3 +43,6 @@ Route::any("posts/{post}/save", "PostController@save")->where("post", "[0-9]+");
 //删除文章
 Route::any("posts/{post}/delete", "PostController@delete")->where(['post'=>'[0-9]+']);
 
+//增加10条测试数据
+Route::any("posts/addData", "PostController@addData");
+

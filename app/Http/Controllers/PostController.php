@@ -59,7 +59,31 @@ class PostController extends Controller
 
     public function delete(Post $post)
     {
-        $post->delete();
+        if($post->delete())
+        {
+            return response()->json(array(
+                    'status' => 1,
+                    'msg' => '删除成功！',
+                ));
+        }
+        else
+        {
+            //return Redirect::back()->withInput()->withErrors('保存失败！');
+            return Redirect::back()->withErrors('删除失败！');
+        }
+        return redirect("posts/listArticle");
+    }
+
+    public function addData()
+    {
+        //使用模型工厂增加10条测试数据，具体配置在 \database\factories\ModelFactory.php
+        if(factory(Post::class)->times(10)->create())
+        {
+            return response()->json(array(
+                    'status' => 1,
+                    'msg' => '添加成功！',
+                ));
+        }
         return redirect("posts/listArticle");
     }
     

@@ -117,6 +117,7 @@
                                     <th>发布日期</th>
     								<th>操作</th>
     							</tr>
+                                {{csrf_field()}}
 
                                 @foreach ($articles as $v)
     							<tr class="trbg">
@@ -126,7 +127,7 @@
     								<td align="center">{{$v->created_at->toFormattedDateString()}}</td> <!-- toFormattedDateString() 时间格式化 -->
                                     <td align="center" width="70">
                                         <a class="article-list-edit" href="{{$v->id}}/edit" title="编辑"><span class="glyphicon glyphicon-edit"></span></a>&nbsp;
-                                        <a class="article-list-delete" href="{{$v->id}}/delete" title="删除"><span class="glyphicon glyphicon-remove"></span> </a>
+                                        <a class="article-list-delete" id="{{$v->id}}/delete" title="删除"><span class="glyphicon glyphicon-remove"></span> </a>
                                     </td>
     							</tr>
                                 @endforeach
@@ -140,6 +141,7 @@
     					</div> -->
     					<div class="sm_main_page" style="margin-left: 38px;">
     						{{$articles->links()}}
+                            <input type="button" class="btn btn-warning article-list-addData" value="增加10条测试数据" style="float: right;margin: 22px 40px;">
     					</div>
     				</div>
     			</div>
