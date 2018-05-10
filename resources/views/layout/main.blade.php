@@ -29,12 +29,21 @@
     <body>
 
 
-    @if(1)
+    @if(!$errors->any())
         @component('alert', ['foo' => 'Error 101:'])
             @slot('title')
                <strong></strong>
             @endslot
             Something Went Wrong!
+            
+            <!--<div class="alert alert-danger">
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>{{$loop->iteration}}. {{$error}}</li>
+                    @endforeach
+                </ul> 
+            </div>-->
+
         @endcomponent
     @endif
 

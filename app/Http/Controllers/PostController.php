@@ -34,26 +34,32 @@ class PostController extends Controller
     
     public function store()
     {
-
     	$post = Post::create(request(['title', 'content']));    	//tinker的应用
-        //dd($post);
+
     	return redirect("posts/listArticle");
     }
 
     public function edit(Post $post)
     {
+        dd($post);
         return view("posts/edit", compact("post"));
     }
 
     public function save(Request $request, $post)
     {
         $posts = Post::find($post);
-        
+
         $posts->title = $request->title;
         $posts->content = $request->content;
 
         $posts->save();
 
+        return redirect("posts/listArticle");
+    }
+
+    public function delete(Post $post)
+    {
+        $post->delete();
         return redirect("posts/listArticle");
     }
     

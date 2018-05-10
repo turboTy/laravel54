@@ -1,5 +1,6 @@
 <script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+<script src="\js\layer\layer.js"></script> 
 <script type="text/javascript">
     var abc = 'this is verbatim';
 
@@ -114,6 +115,14 @@
             $(".c2-r2-tmoblie-title > ul").slideUp();
         }else{
             $(".c2-r2-tmoblie-title > ul").slideDown();
+        }
+    })
+
+    $(".article-list-delete").click(function(){
+        if(!confirm("确定删除？")){
+            return false;
+        }else{
+            layer.msg('删除成功！', {icon: 1});
         }
     })
 </script>

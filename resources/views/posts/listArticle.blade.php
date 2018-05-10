@@ -114,7 +114,8 @@
     								<th>序号</th>
     								<th>标题</th>
     								<th>阅读人次</th>
-    								<th>发布日期</th>
+                                    <th>发布日期</th>
+    								<th>操作</th>
     							</tr>
 
                                 @foreach ($articles as $v)
@@ -123,6 +124,10 @@
     								<td align="left"><a href="{{$v->id}}" title="{{$v->title}}">{{str_limit($v->title, 48, '...')}}</a></td>	<!-- str_limit() 超过param2部分用param3代替 -->
     								<td align="center">{{$v->read_times}}</td>
     								<td align="center">{{$v->created_at->toFormattedDateString()}}</td> <!-- toFormattedDateString() 时间格式化 -->
+                                    <td align="center" width="70">
+                                        <a class="article-list-edit" href="{{$v->id}}/edit" title="编辑"><span class="glyphicon glyphicon-edit"></span></a>&nbsp;
+                                        <a class="article-list-delete" href="{{$v->id}}/delete" title="删除"><span class="glyphicon glyphicon-remove"></span> </a>
+                                    </td>
     							</tr>
                                 @endforeach
     							
