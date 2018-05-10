@@ -595,17 +595,17 @@
     },
     {
         "name": "league/flysystem",
-        "version": "1.0.44",
-        "version_normalized": "1.0.44.0",
+        "version": "1.0.45",
+        "version_normalized": "1.0.45.0",
         "source": {
             "type": "git",
             "url": "https://github.com/thephpleague/flysystem.git",
-            "reference": "168dbe519737221dc87d17385cde33073881fd02"
+            "reference": "a99f94e63b512d75f851b181afcdf0ee9ebef7e6"
         },
         "dist": {
             "type": "zip",
-            "url": "https://files.phpcomposer.com/files/thephpleague/flysystem/168dbe519737221dc87d17385cde33073881fd02.zip",
-            "reference": "168dbe519737221dc87d17385cde33073881fd02",
+            "url": "https://files.phpcomposer.com/files/thephpleague/flysystem/a99f94e63b512d75f851b181afcdf0ee9ebef7e6.zip",
+            "reference": "a99f94e63b512d75f851b181afcdf0ee9ebef7e6",
             "shasum": ""
         },
         "require": {
@@ -635,7 +635,7 @@
             "spatie/flysystem-dropbox": "Allows you to use Dropbox storage",
             "srmklive/flysystem-dropbox-v2": "Allows you to use Dropbox storage for PHP 5 applications"
         },
-        "time": "2018-04-06T09:58:14+00:00",
+        "time": "2018-05-07T08:44:23+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1818,17 +1818,17 @@
     },
     {
         "name": "qiniu/php-sdk",
-        "version": "v7.2.3",
-        "version_normalized": "7.2.3.0",
+        "version": "v7.2.4",
+        "version_normalized": "7.2.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/qiniu/php-sdk.git",
-            "reference": "67852ba9cdd7f48e0e080961abebafee134fb329"
+            "reference": "e5605b20aa4cab7d7ad38c2a510e7086d0d85534"
         },
         "dist": {
             "type": "zip",
-            "url": "https://files.phpcomposer.com/files/qiniu/php-sdk/67852ba9cdd7f48e0e080961abebafee134fb329.zip",
-            "reference": "67852ba9cdd7f48e0e080961abebafee134fb329",
+            "url": "https://files.phpcomposer.com/files/qiniu/php-sdk/e5605b20aa4cab7d7ad38c2a510e7086d0d85534.zip",
+            "reference": "e5605b20aa4cab7d7ad38c2a510e7086d0d85534",
             "shasum": ""
         },
         "require": {
@@ -1838,7 +1838,7 @@
             "phpunit/phpunit": "~4.0",
             "squizlabs/php_codesniffer": "~2.3"
         },
-        "time": "2018-02-20T13:59:54+00:00",
+        "time": "2018-05-09T08:33:46+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
