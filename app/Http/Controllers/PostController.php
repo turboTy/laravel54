@@ -69,7 +69,6 @@ class PostController extends Controller
         else
         {
             //return Redirect::back()->withInput()->withErrors('保存失败！');
-            return Redirect::back()->withErrors('删除失败！');
         }
         return redirect("posts/listArticle");
     }
