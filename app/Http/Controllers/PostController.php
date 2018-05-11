@@ -16,6 +16,7 @@ class PostController extends Controller
     public function listArticle()
     {
     	//$articles = DB::select('select * from posts where user_id < ? order by id', [6]);
+        //paginate分页方法，视图层用 {{$articles->links()}} 
 		$articles = Post::orderBy('created_at', 'desc')->paginate(10);
     	return view("posts/listArticle", compact('articles'));
     }
@@ -32,9 +33,20 @@ class PostController extends Controller
     	return view("posts/create");
     }
     
-    public function store()
+    public function store(Request $request)
     {
-    	$post = Post::create(request(['title', 'content']));    	//tinker的应用
+        //表单验证
+        $this->validate($request, [
+                'title' => 'required|unique:posts|max:255',
+                'content' => 'required',
+            ]);
+
+        /*$post = new Post();
+        $post->title = $request->title;
+        $post->content = $request->content;
+        $post->save();*/
+
+    	$post = Post::create(request(['title', 'content']));    	//tinker的应用，等同于上面注释
 
     	return redirect("posts/listArticle");
     }

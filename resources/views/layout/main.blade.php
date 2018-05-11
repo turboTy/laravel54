@@ -29,20 +29,18 @@
     <body>
 
 
-    @if(!$errors->any())
-        @component('alert', ['foo' => 'Error 101:'])
+    @if($errors->any())
+        @component('alert', ['foo' => ''])
             @slot('title')
-               <strong></strong>
+               <strong>Something Went Wrong!</strong>
             @endslot
-            Something Went Wrong!
-            
-            <!--<div class="alert alert-danger">
-                <ul>
+            <div class="alert alert-danger">
+                <ul style="list-style: none;">
                     @foreach($errors->all() as $error)
                         <li>{{$loop->iteration}}. {{$error}}</li>
                     @endforeach
                 </ul> 
-            </div>-->
+            </div>
 
         @endcomponent
     @endif
