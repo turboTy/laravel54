@@ -11,7 +11,8 @@
 |
 */
 //测试
-Route::get('query1','TestController@query1');
+Route::get('query1',"TestsController@query1");
+Route::get('query2',"TestsController@query2");
 
 Route::get('/', function () {
     return view('welcome');

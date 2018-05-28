@@ -102,31 +102,6 @@ class PostController extends Controller
         }
         return redirect("posts/listArticle");
     }
-    
-    
-
 }
-
-class TestController extends Controller 
-{
-    public function query1()
-    {
-        $bool = DB::table("posts")->insert(
-                ['code' = >'001', 'name' => 'abandon'],
-            );
-        dd($bool);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
 
 ?>
