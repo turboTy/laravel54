@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//测试
+Route::get('query1','TestController@query1');
 
 Route::get('/', function () {
     return view('welcome');

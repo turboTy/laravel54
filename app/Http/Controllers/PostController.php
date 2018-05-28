@@ -10,6 +10,11 @@ class PostController extends Controller
 
     public function index()
     {
+        //$p = Post::get()->first();
+        //$p = Post::find(1);
+        //$p = Post::where('title','保存上传的文件')->get();
+        //dd($p);
+
     	return view("posts/index");
     }
 
@@ -100,6 +105,17 @@ class PostController extends Controller
     
     
 
+}
+
+class TestController extends Controller 
+{
+    public function query1()
+    {
+        $bool = DB::table("posts")->insert(
+                ['code' = >'001', 'name' => 'abandon'],
+            );
+        dd($bool);
+    }
 }
 
 
