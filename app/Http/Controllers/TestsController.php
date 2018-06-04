@@ -23,7 +23,6 @@ class TestsController extends Controller
        /* $id = DB::table('test')->insertGetId(
         		['code' => '002', 'name' => 'banana','bz'=>'']
         	)*/
-
     }
 
     public function query2()
