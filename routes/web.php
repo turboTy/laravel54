@@ -41,7 +41,7 @@ Route::any("posts/{post}/edit", 'PostController@edit')->where("post", "[0-9]+");
 Route::any("posts/store", 'PostController@store');
 
 //保存修改文章
-Route::any("posts/{post}/save", "PostController@save")->where("post", "[0-9]+");
+Route::put("posts/{post}", "PostController@save")->where("post", "[0-9]+");
 
 //删除文章
 Route::any("posts/{post}/delete", "PostController@delete")->where(['post'=>'[0-9]+']);

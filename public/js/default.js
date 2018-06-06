@@ -180,4 +180,9 @@ $(".article-list-addData").click(function(){
     });
 })
 
+//js csrf-token
+//'X-CSRF-TOKEN' : $("meta[name='csrf-token']").attr('content');
+
+
+
 

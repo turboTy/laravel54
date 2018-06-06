@@ -44,7 +44,7 @@ class PostController extends Controller
     {
         //表单验证
         $this->validate($request, [
-                'title' => 'required|unique:posts|max:255',
+                'title' => 'required|unique:posts|max:255|min:5',
                 'content' => 'required',
             ]);
 
@@ -53,8 +53,10 @@ class PostController extends Controller
         $post->content = $request->content;
         $post->save();*/
 
+        //逻辑
     	$post = Post::create(request(['title', 'content']));    	//tinker的应用，等同于上面注释
 
+        //渲染
     	return redirect("posts/listArticle");
     }
 
@@ -64,15 +66,26 @@ class PostController extends Controller
         return view("posts/edit", compact("post"));
     }
 
-    public function save(Request $request, $post)
+    public function save(Post $post)
     {
-        $posts = Post::find($post);
+        //表单验证
+        $this->validate(request(), [
+            'title' => 'required|max:255|min:5',
+            'content' => 'required',
+        ]);
 
+        /*$posts = Post::find($post);
         $posts->title = $request->title;
         $posts->content = $request->content;
+        $posts->save();*/
+        //dd(request());
 
-        $posts->save();
+        //逻辑
+        $post->title = request('title');
+        $post->content = request('content');
+        $post->save();
 
+        //渲染
         return redirect("posts/listArticle");
     }
 

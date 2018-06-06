@@ -3,8 +3,9 @@
 @section("title", "Create Page")
 
 @section("content")
-<form name='form1' action='\posts\{{$post->id}}\save' method='post'>
+<form name='form1' action='\posts\{{$post->id}}' method='post'>
 <div class="article-detail container">
+	{{method_field("PUT")}}
 	{{csrf_field()}}
 	<input class="form-control article-title" type='text' name='title' placeholder='文章标题' value="{{$post->title}}">
 
