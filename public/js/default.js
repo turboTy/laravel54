@@ -1,5 +1,7 @@
 var abc = 'this is verbatim';
 
+
+
 $(document).ready(function(){
     if(screen.width < '1280')
     {
@@ -156,6 +158,11 @@ $(".article-list-delete").click(function(){
     }
 })
 
+function ajax_submit(url, success = 1, type = 'post'){
+	
+}
+
+//增加10条数据
 $(".article-list-addData").click(function(){
     //window.location.href = "/posts/addData";
     $.ajax({
@@ -179,6 +186,8 @@ $(".article-list-addData").click(function(){
         }
     });
 })
+
+
 
 //js csrf-token
 //'X-CSRF-TOKEN' : $("meta[name='csrf-token']").attr('content');

@@ -83,7 +83,15 @@ class PostController extends Controller
         //逻辑
         $post->title = request('title');
         $post->content = request('content');
-        $post->save();
+        if($post->save())
+        {
+        	return response()->json(
+        				array(
+        						'stauts' => 200,
+        						'msg' => '保存成功！'
+        				)
+        			);
+        }
 
         //渲染
         return redirect("posts/listArticle");
@@ -91,6 +99,7 @@ class PostController extends Controller
 
     public function delete(Post $post)
     {
+        //TODO:用户权限验证
         if($post->delete())
         {
             return response()->json(array(
