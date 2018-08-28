@@ -47,6 +47,13 @@
         @endcomponent
     @endif
 
+    {{--成功提示消息--}}
+    {{--@if(Session::has('message'))
+        <div class="alert alert-info"> {{Session::get('message')}}
+        </div>
+    @endif--}}
+
+
     @include("layout.header")
 
     @yield("content")

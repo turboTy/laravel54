@@ -158,10 +158,6 @@ $(".article-list-delete").click(function(){
     }
 })
 
-function ajax_submit(url, success = 1, type = 'post'){
-	
-}
-
 //增加10条数据
 $(".article-list-addData").click(function(){
     //window.location.href = "/posts/addData";
@@ -185,6 +181,19 @@ $(".article-list-addData").click(function(){
             layer.alert('something went wrong!');
         }
     });
+})
+
+$(function(){
+    var url = "{{$url}}"
+    var loginTime = parseInt($('.loginTime').text());
+    var time = setInterval(function(){
+        loginTime = loginTime-1;
+        $('.loginTime').text(loginTime);
+        if(loginTime==0){
+            clearInterval(time);
+            window.location.href=url;
+        }
+    },1000);
 })
 
 

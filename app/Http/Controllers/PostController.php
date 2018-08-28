@@ -83,18 +83,16 @@ class PostController extends Controller
         //逻辑
         $post->title = request('title');
         $post->content = request('content');
-        if($post->save())
-        {
-        	return response()->json(
-        				array(
-        						'stauts' => 200,
-        						'msg' => '保存成功！'
-        				)
-        			);
-        }
+        $post->save();
+
+        return view('posts/create')->with([
+            'message'=>'Update Success!',
+            'url' =>'posts/listArticle',
+            'jumpTime'=>2,
+        ]);
 
         //渲染
-        return redirect("posts/listArticle");
+        //return redirect("posts/listArticle")->with('message', 'Update Success!');
     }
 
     public function delete(Post $post)
@@ -125,6 +123,10 @@ class PostController extends Controller
                 ));
         }
         return redirect("posts/listArticle");
+    }
+
+    public function jump(){
+        return view("posts/jump");
     }
 }
 

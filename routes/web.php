@@ -49,3 +49,6 @@ Route::any("posts/{post}/delete", "PostController@delete")->where(['post'=>'[0-9
 //增加10条测试数据
 Route::any("posts/addData", "PostController@addData");
 
+//跳转
+Route::any("posts/jump", "PostController@jump");
+
